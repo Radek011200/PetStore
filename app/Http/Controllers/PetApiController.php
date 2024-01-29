@@ -104,7 +104,7 @@ class PetApiController extends Controller
 
         if ($validator->fails()) {
             $errors = $validator->errors()->toArray();
-            return response()->json(['errors' => $errors], 400);
+            return response()->json(['errors' => $errors], 422);
         }
 
         try {
