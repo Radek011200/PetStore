@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('/pets/{pet}', [PetApiController::class, 'show'])->name('pet.index');
-Route::get('/pets/findByStatus/{status}', [PetApiController::class, 'findByStatus'])->name('pet.findByStatus');
+Route::get('/pets/find-by-status/{status}', [PetApiController::class, 'findByStatus'])->name('pet.findByStatus');
 Route::post('/pets/store', [PetApiController::class, 'store'])->name('pet.store');
 Route::put('/pets', [PetApiController::class, 'update'])->name('pet.update');
 Route::delete('/pets/{pet}', [PetApiController::class, 'destroy'])->name('pet.destroy');

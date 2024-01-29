@@ -83,7 +83,7 @@
     function searchPets() {
         const status = document.querySelector('input[name="status"]').value;
 
-        axios.get(`/api/pets/findByStatus/${status}`)
+        axios.get(`/api/pets/find-by-status/${status}`)
             .then(response => {
                 const responseDiv = document.getElementById('response');
                 responseDiv.innerHTML = `<p>Status: ${response.status}</p><pre>${JSON.stringify(response.data, null, 2)}</pre>`;
